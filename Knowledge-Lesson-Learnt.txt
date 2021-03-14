@@ -1,0 +1,52 @@
+This is a note I made to summarize things I had learnt with Cypress, knowledge only no practical in here
+
+1. What is Cypress?
+- One of the popular tool for Web integration and End to End UI test automation.
+- Built on Node.js and comes packaged as an npm module - uses JavaScript to write tests
+
+2. What makes Cypress a unique tool?
+- Delivers fast, consistent
+- Flake Resistant - automatically waits for commands and assertions before moving on. No more async issues
+- Test edge cases by mocking the server response
+- Debuggability - takes snapshots as our test run. Can hover on each command in the Command Log to see what happend at each step
+- View videos of the execution of our entire tests when running from Cypress Dashboard
+
+Some of the things are notable
+- Relative naive (This talk about the community of Cypress)
+- Cannot write with old language like C# and Java - using JS
+- No support for multiple browser tabs or popups
+- No shadow DOM support
+- No support on native mobile apps, but it does intend to support mobileweb browsers
+
+3. Cypress Architecture:
+Most testing tools (like Selenium) operate by running outside of the browser and executing remote commands across the network
+(^ Mainly about the webdriver need to apply before running)
+-> Cypress directly operates inside the browser
+(^ Cypress don't need them)
+More details: Cypress Architecture part from this link: https://www.toolsqa.com/cypress/what-is-cypress/
+
+Cypress Browser Support: Canary, Chrome, Electron (Default), Chromium, Mozilla Firefox browsers (beta support), Microsoft Edge (Chromium-based) browsers
+
+4. Cypress components - two main: Cypress Test Runner and Cypress Dashboard
+(^ one of them is used as a runner to run our Cypress test cases on the local machine, and other tracks our runs and status from our Automation Suite)
+- Test Runner:
+  + Runs test in a unique interactive runner that allow us to see commands as they execute while also viewing the application under test
+  + Key of subcomponents that should focus below:
+    * Test status
+    * Url Preview
+    * Viewport Sizing
+    * Command Log
+    * App Preview
+    -> Information: https://www.toolsqa.com/cypress/what-is-cypress/
+
+- Dashboard Service:
+  + Service that provides us access to recored tests - typically when running Cypress tests from our CI provider
+
+5. Unique features provided by Cypress?
+- Time Travel: It can take snapshots of the application when the tests are running. Then as a test developer, we can hover over each command in the Test Runner panel to see what happened at each step.
+- Debuggability: It enables debugging of the tests directly from the familiar tools like Developer Tools. The readable errors and stack traces make debugging lightning fast.
+- Automatic Waiting: With Cypress, there is no need to put explicit waits or sleeps to your tests. It automatically waits for commands and assertions before proceeding.
+- Spies, Stubs, and Clocks: Similar to unit test cases, you can verify and control the behavior of functions, server responses, or timers at run time using the spies and stubs provided by Cypress.
+- Network Traffic Control:  Using Cypress, you can stub network traffic as you like and customize the response of your API calls as per your need.
+- Consistent Results: As Cypress doesn’t use Selenium or WebDriver and executes tests directly in the browser, it aids for fast, consistent, and reliable tests that are flake-free.
+- Screenshots and Videos: It takes screenshots automatically on failure, or record videos of your entire test suite when running from the CLI.
