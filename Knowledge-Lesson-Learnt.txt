@@ -50,3 +50,30 @@ Cypress Browser Support: Canary, Chrome, Electron (Default), Chromium, Mozilla F
 - Network Traffic Control:  Using Cypress, you can stub network traffic as you like and customize the response of your API calls as per your need.
 - Consistent Results: As Cypress doesn’t use Selenium or WebDriver and executes tests directly in the browser, it aids for fast, consistent, and reliable tests that are flake-free.
 - Screenshots and Videos: It takes screenshots automatically on failure, or record videos of your entire test suite when running from the CLI.
+
+6. Cypress domain structure
+- Fixtures (Chưa nắm được ý nghĩa hoàn toàn của phần này)
+- Integration:
+  + Provide places that write down our test cases
+- Plugins:
+  + Contain plugins or listeners
+- Support:
+  + Write customized commands or reusable method
+- Node_Modules: 
+  + The heart of the cypress project
+- Cypress.json: used to store different configurations
+  + Timeout
+  + Base Url
+  + Test files
+  + ...
+
+7. Basic Constructs of Cypress
+- describe(): It is is simply a way to group our tests. It takes two arguments, the first is the name of the test group, and the second is a callback function. 
+- context(): It is is just an alias for describe().
+- it(): We use it for an individual test case. It takes two arguments, a string explaining what the test should do, and a callback function which contains our actual test.
+- before():  It runs once before all tests in the block.
+- after(): It runs once after all tests in the block.
+- beforeEach(): It runs before each test in the block.
+- afterEach(): It runs after each test in the block.
+- .only(): To run a specified suite or test, append “.only” to the function.
+- .skip(): To skip a specified suite or test, append “.skip()” to the function.
