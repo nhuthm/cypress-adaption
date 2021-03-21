@@ -9,9 +9,14 @@ describe('First Cypress Test Adaption From Nhut', function() {
         cy.visit("https://demoqa.com/")
     })
 
-    //Testcase: click aciton
-    it('Nhut do another action to check if this is for describe a testcase', function() {
-        cy.get(':nth-child(4) > :nth-child(1) > .avatar > svg').click();
-        cy.get(':nth-child(4) > .element-list > .menu-list > li').should('have.length',9);
+    //Testcase: click action (by using Cypress Locator definition)
+    // it('Nhut do another action to check if this is for describe a testcase', function() {
+    //     cy.get(':nth-child(4) > :nth-child(1) > .avatar > svg').click();
+    //     cy.get(':nth-child(4) > .element-list > .menu-list > li').should('have.length',9);
+    // })
+    
+    //Testcase: click action (by using library Cypress-xpath) -> easy using
+    it('Nhut do another action to check if this is for describe a test', function() {
+        cy.xpath('//*[contains(@class,"top-card")][4]').click()
     })
 })
