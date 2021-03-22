@@ -22,6 +22,7 @@
     "cypress-xpath": "^1.6.2"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinition": true
+    "nonGlobalStepDefinition": true,
+    "step_definitions": "cypress/integration/step_definitions/**/"
   }
 }
