@@ -18,6 +18,10 @@
   "homepage": "https://github.com/nhuthm/cypress-adaption#readme",
   "devDependencies": {
     "cypress": "^6.8.0",
+    "cypress-cucumber-preprocessor": "^4.0.1",
     "cypress-xpath": "^1.6.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinition": true
   }
 }
