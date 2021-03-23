@@ -8,7 +8,7 @@ Scenario: Verify user can go to Aharooms.net site
 
 # Scenario: Verify user can search for the hotel
 #     Given Click on tab "Ngày"
-    # When Enter "Friday Hotel City View" to field "Khách sạn, thành phố, đường"
-    # And Select "Friday Hotel City View" from 'Gợi ý' dropdown
-    # And Click on 'Tìm kiếm'
-    # Then Verify hotel listing page appears with hotel "Friday Hotel City View" on the top of the list
+#     When Enter "Friday Hotel City View" to field "Khách sạn, thành phố, đường"
+#     And Select "Friday Hotel City View" from 'Gợi ý' dropdown
+#     And Click on 'Tìm kiếm'
+#     Then Verify hotel listing page appears with hotel "Friday Hotel City View" on the top of the list

@@ -24,5 +24,8 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinition": true,
     "step_definitions": "cypress/integration/step_definitions/**/"
+  },
+  "dependencies": {
+    "printf": "^0.6.1"
   }
 }

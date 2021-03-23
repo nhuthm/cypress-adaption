@@ -16,6 +16,13 @@ Then('I verify search fields appears on Home Page', () => {
     homePage.getSearchTabComponent().contains("Tìm kiếm")
 });
 
-When('I verify {string} section appears on Home Page', () => {
-
+When('I verify {string} section appears on Home Page', (string) => {
+    switch (string) {
+        case ("Săn hot Deal"):
+            homePage.getPromotionLabelTextComponent().should('have.text', string)
+            break;
+        case ("Những khách sạn nổi bật"):
+            homePage.getLabelTextXpath(string).should('have.text', string)
+            break;
+    }
 });
