@@ -1,5 +1,8 @@
 const aharoomsURL = 'https://staging.aharooms.net/'
 import {Given, When, Then} from "cypress-cucumber-preprocessor/steps"
+import HomePage from '../../integration/page_object/secondCucumberPageObject'
+
+const homePage = new HomePage()
 
 Given('I go to {string} site', (string) => {
     switch (string) {
@@ -10,5 +13,9 @@ Given('I go to {string} site', (string) => {
 });
 
 Then('I verify search fields appears on Home Page', () => {
-    cy.xpath("//*[contains(@role,'tabpanel')]").contains("Tìm kiếm")
+    homePage.getSearchTabComponent().contains("Tìm kiếm")
+});
+
+When('I verify {string} section appears on Home Page', () => {
+
 });
